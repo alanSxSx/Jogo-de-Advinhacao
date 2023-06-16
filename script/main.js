@@ -39,7 +39,12 @@ function exibirNumeros() {
         newMessage.style.display = "flex"
         newMessage.style.background = "red"
         document.getElementById('changeMessage').textContent = 'Palpite Errado !'
-    }  if(numero < 1 | numero > 100) {
+    }  if(numero > sorteioNumero) {
+        document.getElementById('changeDica').textContent = 'Palpite Maior do que o número Sorteado !'
+    } if (numero < sorteioNumero) {
+        document.getElementById('changeDica').textContent = 'Palpite Menor do que o número Sorteado !'
+    } 
+        if(numero < 1 | numero > 100) {
         document.getElementById('changeMessage').textContent = 'Digite um número Válido !'
         newMessage.style.display = "flex"
         newMessage.style.background = "yellow"
@@ -49,6 +54,8 @@ function exibirNumeros() {
         newMessage.style.display = "flex"
         newMessage.style.background = "green"
         newMessage.style.color = "white"
+        document.getElementById('changeDica').textContent = 'Palpite CORRETO !'
+
     }
    
     console.log(arrayNumeros);
