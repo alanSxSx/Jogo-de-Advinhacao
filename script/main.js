@@ -13,9 +13,8 @@ function sorteio(min,max) {
 }
 
 let sorteioNumero= sorteio(1,100)
-
-
 let arrayNumeros = [];
+
 
 function exibirNumeros() {
     let numeros = document.getElementById('numerosPalpite').value;
@@ -33,8 +32,8 @@ function exibirNumeros() {
         console.log('Número Inválido, Digite um número de 1 a 100')
         document.getElementById('numerosPalpite').value = ''
         
-    }
-
+    } 
+    
     if(numero > sorteioNumero | numero < sorteioNumero) {
         newMessage.style.display = "flex"
         newMessage.style.background = "red"
@@ -55,9 +54,11 @@ function exibirNumeros() {
         newMessage.style.background = "green"
         newMessage.style.color = "white"
         document.getElementById('changeDica').textContent = 'Palpite CORRETO !'
-
+    } if(arrayNumeros.length > 9) {
+        console.log('FIm de Jogo')
     }
-   
+
+    document.getElementById('changeArray').textContent = arrayNumeros.join(', ');
     console.log(arrayNumeros);
 }
 
