@@ -22,18 +22,33 @@ function exibirNumeros() {
     let numero = parseInt(numeros)
 
 
-    if(numero > 1 | numero < 100){
+    if(numero >= 1 & numero <= 100) {
         arrayNumeros.push(numero);
         document.getElementById('numerosPalpite').value = ''
-        if(numero > sorteioNumero | numero < sorteioNumero) {
-            newMessage.style.display = "flex"
-            newMessage.style.background = "red"
-            document.getElementById('changeMessage').textContent = 'Palpite Errado !'
-        }
-    }    
-    else {
+    } else {
+        document.getElementById('changeMessage').textContent = 'Digite um número Válido !'
+        newMessage.style.display = "flex"
+        newMessage.style.background = "yellow"
+        newMessage.style.color = "black"
         console.log('Número Inválido, Digite um número de 1 a 100')
-        console.log(sorteioNumero)
+        document.getElementById('numerosPalpite').value = ''
+        
+    }
+
+    if(numero > sorteioNumero | numero < sorteioNumero) {
+        newMessage.style.display = "flex"
+        newMessage.style.background = "red"
+        document.getElementById('changeMessage').textContent = 'Palpite Errado !'
+    }  if(numero < 1 | numero > 100) {
+        document.getElementById('changeMessage').textContent = 'Digite um número Válido !'
+        newMessage.style.display = "flex"
+        newMessage.style.background = "yellow"
+        newMessage.style.color = "black"
+    }  if(numero == sorteioNumero) {
+        document.getElementById('changeMessage').textContent = 'Você Acertou !'
+        newMessage.style.display = "flex"
+        newMessage.style.background = "green"
+        newMessage.style.color = "white"
     }
    
     console.log(arrayNumeros);
