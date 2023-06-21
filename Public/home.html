@@ -5,19 +5,21 @@
     <title>Jogo de Advinhação</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
 </head>
-
+	<body>
     <h1>Jogo de Advinhação</h1>
     <h3>Advinhe um número:</h3>
     <h4>Selecionamos um número aleatório entre 1 e 100.<br>
     Veja se consegue adivinhar em 10 chances ou menos.<br>
     Nós lhe diremos se seu palpite está com valor alto ou baixo.</h4>
-    <label for="numerosPalpite">Digite seu Palpite:</label>
-    <input type="text" id="numerosPalpite" name="number" ></input>
-    <button id="enviarPalpite" onclick="exibirNumeros()">Enviar Palpite</button><br><br>
-    <div>Palpites anteriores: <b id="changeArray">0</b></div> <br>
+		<div id="digpalp">
+			<label for="numerosPalpite">Digite seu Palpite:</label>
+			<input type="text" id="numerosPalpite" name="number" ></input>
+			<button id="enviarPalpite" onclick="exibirNumeros()">Enviar Palpite</button><br><br>
+		</div>
+    <div id="palpitesant">Palpites anteriores: <b id="changeArray">0</b></div> <br>
     <div id="changeMessage"></div><br>
     <div id="changeDica"></div><br>
-    <div id="buttonNew"><button>Iniciar Novo Jogo</button></div>
+    <div id="buttonNew" onclick="novoJogo()"><button>Iniciar Novo Jogo</button></div>
 
 <script src="../script/main.js"></script>
 </body>

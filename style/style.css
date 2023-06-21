@@ -9,3 +9,46 @@
     align-items: center;
     justify-content: center;
 }
+
+#buttonNew {
+	display:flex;
+	align-items: center;
+  justify-content: center;
+
+}
+
+#buttonNew button {
+	width: 600px;
+	height: 50px;
+	background-color: blue;
+	color: white;
+	font-weight: bold;
+}
+
+
+body h1,h3,h4,label,input,button {
+	display:flex;
+	align-items: center;
+  justify-content: center;
+
+}
+
+#palpitesant {
+	display:flex;
+	align-items: center;
+  justify-content: center;
+}
+
+#digpalp{
+	display:flex;
+	align-items: center;
+  justify-content: center;
+}
+
+
+#digpalp label,button,input{
+	margin-right: 10px;
+	margin-bottom: 20px;
+
+}
+
